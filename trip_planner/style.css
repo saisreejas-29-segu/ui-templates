@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #f8f7f4;
+    color: #242320;
+    font-family: "DM Sans", sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navbar {
+    height: 90px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #ddd9d1;
+}
+
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+nav a {
+    font-size: 14px;
+}
+
+
+.navbar button,
+.planner-heading button {
+    background: #282722;
+    color: white;
+
+    border: none;
+
+    padding: 14px 23px;
+
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.planner-hero {
+    padding: 105px 9% 75px;
+}
+
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #8a755f;
+    margin-bottom: 20px;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+
+.planner-hero h1 {
+    font-size: clamp(55px, 7vw, 85px);
+    line-height: 1;
+}
+
+
+.planner-hero h1 span,
+h2 span {
+    color: #93806c;
+}
+
+
+.planner-hero > p:last-child {
+    color: #77736d;
+    max-width: 500px;
+    margin-top: 28px;
+}
+
+
+/* SUMMARY */
+
+.trip-summary {
+    margin: 0 7%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid #dcd8d0;
+    border-bottom: 1px solid #dcd8d0;
+}
+
+
+.trip-summary div {
+    padding: 28px;
+
+    border-right: 1px solid #dcd8d0;
+}
+
+
+.trip-summary div:last-child {
+    border-right: none;
+}
+
+
+.trip-summary span {
+    display: block;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #8a755f;
+
+    margin-bottom: 9px;
+}
+
+
+.trip-summary strong {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+
+/* PLANNER */
+
+.planner-content {
+    padding: 110px 10%;
+}
+
+
+.planner-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+
+.planner-heading h2,
+.progress-section h2 {
+    font-size: 52px;
+    line-height: 1.05;
+}
+
+
+/* DAY CARDS */
+
+.day-card {
+    display: grid;
+
+    grid-template-columns: 90px 1fr 50px;
+
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #dedbd4;
+
+    margin-bottom: 15px;
+
+    transition: transform 0.3s ease;
+}
+
+
+.day-card:hover {
+    transform: translateX(5px);
+}
+
+
+.day-number {
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    color: #a09281;
+}
+
+
+.day-info span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #927961;
+}
+
+
+.day-info h3 {
+    font-size: 25px;
+
+    margin: 8px 0;
+}
+
+
+.day-info p {
+    color: #77736d;
+
+    font-size: 13px;
+}
+
+
+.delete-btn {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #ddd9d1;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+/* PROGRESS */
+
+.progress-section {
+    background: #e6e0d6;
+
+    padding: 100px 10%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.progress-box {
+    width: 400px;
+}
+
+
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+.progress-bar {
+    height: 8px;
+
+    background: #ccc5bb;
+
+    margin-top: 15px;
+}
+
+
+.progress-bar div {
+    width: 65%;
+    height: 100%;
+
+    background: #706455;
+}
+
+
+footer {
+    padding: 35px 7%;
+
+    background: #272622;
+
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+footer span {
+    color: #aaa7a0;
+
+    font-size: 12px;
+}
+
+
+@media(max-width: 800px) {
+
+    nav {
+        display: none;
+    }
+
+    .trip-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .progress-section {
+        display: block;
+    }
+
+    .progress-box {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .trip-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .trip-summary div {
+        border-right: none;
+        border-bottom: 1px solid #dcd8d0;
+    }
+
+    .planner-heading {
+        display: block;
+    }
+
+    .planner-heading button {
+        margin-top: 25px;
+    }
+
+    .day-card {
+        grid-template-columns: 50px 1fr 30px;
+        padding: 20px;
+    }
+
+}

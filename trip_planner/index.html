@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trip Planner — UIVerse</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            UIVerse
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#itinerary">Itinerary</a>
+            <a href="#progress">Progress</a>
+        </nav>
+
+        <button id="saveBtn">
+            Save Trip
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="planner-hero">
+
+            <p class="eyebrow">
+                TRAVEL · PLAN
+            </p>
+
+            <h1>
+                Plan the journey<br>
+                <span>before you take it.</span>
+            </h1>
+
+            <p>
+                Organize destinations, activities and
+                experiences into one simple itinerary.
+            </p>
+
+        </section>
+
+
+        <section class="trip-summary">
+
+            <div>
+                <span>DESTINATION</span>
+                <strong>Kyoto, Japan</strong>
+            </div>
+
+            <div>
+                <span>DATES</span>
+                <strong>12 — 18 NOV</strong>
+            </div>
+
+            <div>
+                <span>TRAVELLERS</span>
+                <strong>02 People</strong>
+            </div>
+
+            <div>
+                <span>STATUS</span>
+                <strong>Planning</strong>
+            </div>
+
+        </section>
+
+
+        <section class="planner-content" id="itinerary">
+
+            <div class="planner-heading">
+
+                <div>
+                    <p class="eyebrow">YOUR ITINERARY</p>
+
+                    <h2>
+                        Kyoto<br>
+                        <span>Seven days.</span>
+                    </h2>
+                </div>
+
+                <button id="addActivity">
+                    + Add Activity
+                </button>
+
+            </div>
+
+
+            <div id="activityList">
+
+                <div class="day-card">
+
+                    <div class="day-number">
+                        01
+                    </div>
+
+                    <div class="day-info">
+
+                        <span>12 NOVEMBER</span>
+
+                        <h3>Arrival & Old Kyoto</h3>
+
+                        <p>
+                            Check in, explore Gion and enjoy
+                            a quiet evening walk.
+                        </p>
+
+                    </div>
+
+                    <button class="delete-btn">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="day-card">
+
+                    <div class="day-number">
+                        02
+                    </div>
+
+                    <div class="day-info">
+
+                        <span>13 NOVEMBER</span>
+
+                        <h3>Temples & Gardens</h3>
+
+                        <p>
+                            Visit Kinkaku-ji, Ryoan-ji and
+                            explore the surrounding gardens.
+                        </p>
+
+                    </div>
+
+                    <button class="delete-btn">
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="day-card">
+
+                    <div class="day-number">
+                        03
+                    </div>
+
+                    <div class="day-info">
+
+                        <span>14 NOVEMBER</span>
+
+                        <h3>Arashiyama</h3>
+
+                        <p>
+                            Bamboo forest, river walk and
+                            traditional tea experience.
+                        </p>
+
+                    </div>
+
+                    <button class="delete-btn">
+                        ×
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="progress-section" id="progress">
+
+            <div>
+
+                <p class="eyebrow">
+                    TRIP PROGRESS
+                </p>
+
+                <h2>
+                    Your plan is<br>
+                    <span>coming together.</span>
+                </h2>
+
+            </div>
+
+            <div class="progress-box">
+
+                <div class="progress-top">
+                    <span>PLANNING PROGRESS</span>
+                    <strong>65%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div></div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <strong>UIVerse</strong>
+
+        <span>Trip Planner Template</span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

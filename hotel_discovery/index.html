@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Discovery — UIVerse</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            UIVerse
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#hotels">Hotels</a>
+            <a href="#filters">Filters</a>
+        </nav>
+
+        <button class="outline-button">
+            My Trips
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <p class="eyebrow">
+                TRAVEL · STAY
+            </p>
+
+            <h1>
+                Stay somewhere<br>
+                <span>worth arriving at.</span>
+            </h1>
+
+            <p>
+                Discover carefully selected hotels for
+                every kind of journey.
+            </p>
+
+        </section>
+
+
+        <section class="search-section" id="filters">
+
+            <div class="field">
+
+                <label>DESTINATION</label>
+
+                <input
+                    id="locationInput"
+                    type="text"
+                    placeholder="Where are you going?">
+
+            </div>
+
+
+            <div class="field">
+
+                <label>CHECK IN</label>
+
+                <input type="date">
+
+            </div>
+
+
+            <div class="field">
+
+                <label>CHECK OUT</label>
+
+                <input type="date">
+
+            </div>
+
+
+            <div class="field">
+
+                <label>GUESTS</label>
+
+                <input
+                    type="text"
+                    value="2 Guests">
+
+            </div>
+
+
+            <button id="searchHotels">
+                Search
+            </button>
+
+        </section>
+
+
+        <section class="hotel-section" id="hotels">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">
+                        STAYS TO CONSIDER
+                    </p>
+
+                    <h2>
+                        Find your<br>
+                        <span>perfect stay.</span>
+                    </h2>
+                </div>
+
+                <select id="sortSelect">
+
+                    <option value="default">
+                        Recommended
+                    </option>
+
+                    <option value="low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="high">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="hotel-grid" id="hotelGrid">
+
+
+                <article class="hotel-card" data-price="180">
+
+                    <div class="hotel-image hotel-one">
+                        <span>KYOTO</span>
+                    </div>
+
+                    <div class="hotel-content">
+
+                        <div class="hotel-top">
+
+                            <div>
+                                <p>KYOTO · JAPAN</p>
+                                <h3>Hikari House</h3>
+                            </div>
+
+                            <button class="heart">
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div class="hotel-bottom">
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                            <strong>
+                                $180 <small>/ night</small>
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="hotel-card" data-price="240">
+
+                    <div class="hotel-image hotel-two">
+                        <span>PARIS</span>
+                    </div>
+
+                    <div class="hotel-content">
+
+                        <div class="hotel-top">
+
+                            <div>
+                                <p>PARIS · FRANCE</p>
+                                <h3>Maison Lumière</h3>
+                            </div>
+
+                            <button class="heart">
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div class="hotel-bottom">
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                            <strong>
+                                $240 <small>/ night</small>
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="hotel-card" data-price="145">
+
+                    <div class="hotel-image hotel-three">
+                        <span>BALI</span>
+                    </div>
+
+                    <div class="hotel-content">
+
+                        <div class="hotel-top">
+
+                            <div>
+                                <p>BALI · INDONESIA</p>
+                                <h3>Ubud Retreat</h3>
+                            </div>
+
+                            <button class="heart">
+                                ♡
+                            </button>
+
+                        </div>
+
+                        <div class="hotel-bottom">
+
+                            <span>
+                                ★ 4.7
+                            </span>
+
+                            <strong>
+                                $145 <small>/ night</small>
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <strong>UIVerse</strong>
+
+        <span>Hotel Discovery Template</span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

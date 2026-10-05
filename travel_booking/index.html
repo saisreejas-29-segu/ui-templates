@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Booking — UIVerse</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="../index.html" class="logo">
+            UIVerse
+        </a>
+
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="#packages">Packages</a>
+            <a href="#booking">Booking</a>
+        </nav>
+
+        <button class="outline-button">
+            My Booking
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    TRAVEL · BOOK
+                </p>
+
+                <h1>
+                    Your next story<br>
+                    <span>starts here.</span>
+                </h1>
+
+                <p>
+                    Choose a destination, select an experience
+                    and make your next journey happen.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="packages" id="packages">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        CURATED JOURNEYS
+                    </p>
+
+                    <h2>
+                        Choose your<br>
+                        <span>next escape.</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="package-grid">
+
+
+                <article class="package-card">
+
+                    <div class="package-image japan">
+
+                        <span>01</span>
+
+                    </div>
+
+                    <div class="package-content">
+
+                        <p>7 DAYS · JAPAN</p>
+
+                        <h3>Kyoto Slow Escape</h3>
+
+                        <div class="package-bottom">
+
+                            <strong>
+                                $1,240
+                            </strong>
+
+                            <button
+                                class="book-button"
+                                data-package="Kyoto Slow Escape">
+
+                                Book Now →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="package-card">
+
+                    <div class="package-image italy">
+
+                        <span>02</span>
+
+                    </div>
+
+                    <div class="package-content">
+
+                        <p>6 DAYS · ITALY</p>
+
+                        <h3>Italian Summer</h3>
+
+                        <div class="package-bottom">
+
+                            <strong>
+                                $1,480
+                            </strong>
+
+                            <button
+                                class="book-button"
+                                data-package="Italian Summer">
+
+                                Book Now →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <article class="package-card">
+
+                    <div class="package-image bali">
+
+                        <span>03</span>
+
+                    </div>
+
+                    <div class="package-content">
+
+                        <p>5 DAYS · BALI</p>
+
+                        <h3>Island Retreat</h3>
+
+                        <div class="package-bottom">
+
+                            <strong>
+                                $890
+                            </strong>
+
+                            <button
+                                class="book-button"
+                                data-package="Island Retreat">
+
+                                Book Now →
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <section class="booking-section" id="booking">
+
+            <div class="booking-heading">
+
+                <p class="eyebrow">
+                    COMPLETE YOUR JOURNEY
+                </p>
+
+                <h2>
+                    Almost ready<br>
+                    <span>to leave.</span>
+                </h2>
+
+            </div>
+
+
+            <form id="bookingForm">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>FULL NAME</label>
+
+                        <input
+                            type="text"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>EMAIL</label>
+
+                        <input
+                            type="email"
+                            placeholder="you@example.com"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>TRAVELLERS</label>
+
+                        <select>
+
+                            <option>1 Traveller</option>
+                            <option>2 Travellers</option>
+                            <option>3 Travellers</option>
+                            <option>4 Travellers</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>TRAVEL DATE</label>
+
+                        <input type="date" required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="selected-package">
+
+                    <span>SELECTED PACKAGE</span>
+
+                    <strong id="selectedPackage">
+                        No package selected
+                    </strong>
+
+                </div>
+
+
+                <button class="submit-button" type="submit">
+
+                    Confirm Booking →
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <strong>UIVerse</strong>
+
+        <span>Travel Booking Template</span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

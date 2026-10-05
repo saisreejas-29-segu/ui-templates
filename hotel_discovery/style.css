@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #f8f7f4;
+    color: #242320;
+
+    font-family: "DM Sans", sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navbar {
+    height: 90px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #ddd9d1;
+}
+
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+}
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+nav a {
+    font-size: 14px;
+}
+
+
+.outline-button {
+    border: 1px solid #333;
+
+    background: transparent;
+
+    padding: 12px 22px;
+
+    cursor: pointer;
+}
+
+
+/* HERO */
+
+.hero {
+    padding: 105px 8% 70px;
+}
+
+
+.eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #8a755f;
+
+    margin-bottom: 20px;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+}
+
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 88px);
+
+    line-height: 1;
+}
+
+
+.hero h1 span,
+h2 span {
+    color: #93806c;
+}
+
+
+.hero > p:last-child {
+    margin-top: 28px;
+
+    color: #77736d;
+
+    max-width: 500px;
+}
+
+
+/* SEARCH */
+
+.search-section {
+    margin: 0 7%;
+
+    background: white;
+
+    border: 1px solid #ddd9d1;
+
+    padding: 18px;
+
+    display: flex;
+
+    box-shadow: 0 15px 35px rgba(30, 28, 24, 0.05);
+}
+
+
+.field {
+    flex: 1;
+
+    padding: 8px 22px;
+
+    border-right: 1px solid #ddd9d1;
+}
+
+
+.field label {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #8a755f;
+}
+
+
+.field input {
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    margin-top: 8px;
+
+    font-family: inherit;
+}
+
+
+#searchHotels {
+    border: none;
+
+    background: #292824;
+
+    color: white;
+
+    padding: 0 28px;
+
+    cursor: pointer;
+}
+
+
+/* HOTEL SECTION */
+
+.hotel-section {
+    padding: 110px 7%;
+}
+
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+    font-size: 52px;
+
+    line-height: 1;
+}
+
+
+#sortSelect {
+    border: 1px solid #d6d1c8;
+
+    background: transparent;
+
+    padding: 12px 18px;
+
+    font-family: inherit;
+}
+
+
+/* HOTELS */
+
+.hotel-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.hotel-card {
+    background: white;
+
+    border: 1px solid #dedbd4;
+
+    transition: transform 0.3s ease;
+}
+
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.hotel-image {
+    height: 300px;
+
+    position: relative;
+}
+
+
+.hotel-image span {
+    position: absolute;
+
+    left: 22px;
+    top: 20px;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.hotel-one {
+    background: linear-gradient(145deg, #cfc8bb, #9e9688);
+}
+
+
+.hotel-two {
+    background: linear-gradient(145deg, #d9d1c8, #a49a91);
+}
+
+
+.hotel-three {
+    background: linear-gradient(145deg, #d7d0bd, #a39b84);
+}
+
+
+.hotel-content {
+    padding: 25px;
+}
+
+
+.hotel-top {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.hotel-top p {
+    color: #93775f;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+.hotel-top h3 {
+    font-size: 25px;
+
+    margin-top: 7px;
+}
+
+
+.heart {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    border: 1px solid #ddd9d1;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+.hotel-bottom {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.hotel-bottom span {
+    font-size: 12px;
+
+    color: #8a755f;
+}
+
+
+.hotel-bottom strong {
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+}
+
+
+.hotel-bottom small {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 10px;
+
+    color: #888;
+}
+
+
+footer {
+    background: #272622;
+
+    color: white;
+
+    padding: 35px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+footer span {
+    color: #aaa7a0;
+
+    font-size: 12px;
+}
+
+
+@media(max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .search-section {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .field {
+        border-bottom: 1px solid #ddd9d1;
+    }
+
+    #searchHotels {
+        padding: 16px;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .search-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hotel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        display: block;
+    }
+
+    #sortSelect {
+        margin-top: 25px;
+    }
+
+}
