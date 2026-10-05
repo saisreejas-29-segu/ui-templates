@@ -1,807 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Brands</title>
 
-    <title>UIVerse — UI Template Collection</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
 
-    <link rel="stylesheet" href="style.css">
+        body {
+            background: #fff5f8;
+            color: #333;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        header h1 {
+            font-size: 35px;
+        }
+
+        header p {
+            margin-top: 8px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .logo {
+            width: 130px;
+            height: 130px;
+            margin: auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .sephora {
+            background: #111;
+            color: white;
+        }
+
+        .lakme {
+            background: #e91e63;
+            color: white;
+        }
+
+        .rare {
+            background: #f8c8d8;
+            color: #222;
+        }
+
+        .huda {
+            background: #b58b65;
+            color: white;
+        }
+
+        .card h2 {
+            margin: 20px 0 10px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            background: #111;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e91e63;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media(max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-
-    <header class="navbar">
-
-        <a href="index.html" class="logo">
-            UIVerse
-        </a>
-
-        <nav class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#templates">Templates</a>
-            <a href="#domains">Domains</a>
-            <a href="#team">Team</a>
-        </nav>
-
-        <a href="#templates" class="nav-button">
-            Explore Collection
-        </a>
-
+    <header>
+        <h1>✨ BEAUTY BRANDS ✨</h1>
+        <p>Explore Your Favourite Makeup Brands</p>
     </header>
 
-
-    <!-- ================= HERO ================= -->
-
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    UI TEMPLATE COLLECTION · 2026
-                </p>
-
-                <h1>
-                    A collection of<br>
-                    <span>modern web interfaces.</span>
-                </h1>
-
-                <p class="hero-description">
-                    A curated collection of responsive and modern
-                    user interface templates created across four
-                    different digital domains.
-                </p>
-
-                <a href="#templates" class="hero-button">
-                    Explore Templates →
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= STATS ================= -->
-
-        <section class="stats-section">
-
-            <div class="stat">
-                <strong>16</strong>
-                <span>UI Templates</span>
-            </div>
-
-            <div class="stat">
-                <strong>04</strong>
-                <span>Domains</span>
-            </div>
-
-            <div class="stat">
-                <strong>04</strong>
-                <span>Team Members</span>
-            </div>
-
-            <div class="stat">
-                <strong>03</strong>
-                <span>Technologies</span>
-            </div>
-
-        </section>
-
-
-        <!-- ================= TEMPLATES ================= -->
-
-        <section class="templates-section" id="templates">
-
-            <div class="section-heading">
-
-                <div>
-                    <p class="eyebrow">THE COLLECTION</p>
-
-                    <h2>
-                        Explore our<br>
-                        <span>interfaces.</span>
-                    </h2>
-                </div>
-
-                <p class="section-description">
-                    Four domains. Four interfaces each.
-                    Designed with clarity, usability and
-                    modern visual language in mind.
-                </p>
-
-            </div>
-
-
-            <!-- FILTER BUTTONS -->
-
-            <div class="filters">
-
-                <button class="filter active" data-filter="all">
-                    All
-                </button>
-
-                <button class="filter" data-filter="shopping">
-                    Shopping
-                </button>
-
-                <button class="filter" data-filter="cosmetics">
-                    Cosmetics
-                </button>
-
-                <button class="filter" data-filter="food">
-                    Food
-                </button>
-
-                <button class="filter" data-filter="travel">
-                    Travel
-                </button>
-
-            </div>
-
-
-            <!-- ================= TEMPLATE GRID ================= -->
-
-            <div class="template-grid">
-
-
-                <!-- ========== SHOPPING ========== -->
-
-                <article class="template-card" data-category="shopping">
-
-                    <div class="preview shopping-preview">
-                        <span>SHOPPING</span>
-
-                        <div class="preview-line"></div>
-                        <div class="preview-boxes">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            SHOPPING
-                        </p>
-
-                        <h3>Amazon</h3>
-
-                        <p>
-                            E-commerce shopping interface inspired
-                            by large-scale online marketplaces.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="shopping">
-
-                    <div class="preview shopping-preview">
-                        <span>SHOPPING</span>
-
-                        <div class="preview-line"></div>
-                        <div class="preview-boxes">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            SHOPPING
-                        </p>
-
-                        <h3>Flipkart</h3>
-
-                        <p>
-                            Modern product discovery and shopping
-                            interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="shopping">
-
-                    <div class="preview shopping-preview">
-                        <span>SHOPPING</span>
-
-                        <div class="preview-line"></div>
-                        <div class="preview-boxes">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            SHOPPING
-                        </p>
-
-                        <h3>Myntra</h3>
-
-                        <p>
-                            Fashion-focused shopping and product
-                            browsing experience.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="shopping">
-
-                    <div class="preview shopping-preview">
-                        <span>SHOPPING</span>
-
-                        <div class="preview-line"></div>
-                        <div class="preview-boxes">
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            SHOPPING
-                        </p>
-
-                        <h3>AJIO</h3>
-
-                        <p>
-                            Contemporary fashion and online shopping
-                            interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ========== COSMETICS ========== -->
-
-                <article class="template-card" data-category="cosmetics">
-
-                    <div class="preview cosmetics-preview">
-                        <span>COSMETICS</span>
-
-                        <div class="cosmetic-circle"></div>
-                        <div class="cosmetic-line"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            COSMETICS
-                        </p>
-
-                        <h3>Sephora</h3>
-
-                        <p>
-                            Premium beauty discovery and cosmetics
-                            shopping interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="cosmetics">
-
-                    <div class="preview cosmetics-preview">
-                        <span>COSMETICS</span>
-
-                        <div class="cosmetic-circle"></div>
-                        <div class="cosmetic-line"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            COSMETICS
-                        </p>
-
-                        <h3>Lakme</h3>
-
-                        <p>
-                            Beauty products and cosmetics discovery
-                            experience.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="cosmetics">
-
-                    <div class="preview cosmetics-preview">
-                        <span>COSMETICS</span>
-
-                        <div class="cosmetic-circle"></div>
-                        <div class="cosmetic-line"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            COSMETICS
-                        </p>
-
-                        <h3>Rare Beauty</h3>
-
-                        <p>
-                            Minimal beauty product discovery and
-                            shopping interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="cosmetics">
-
-                    <div class="preview cosmetics-preview">
-                        <span>COSMETICS</span>
-
-                        <div class="cosmetic-circle"></div>
-                        <div class="cosmetic-line"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            COSMETICS
-                        </p>
-
-                        <h3>Huda Beauty</h3>
-
-                        <p>
-                            Beauty collection and product browsing
-                            interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ========== FOOD ========== -->
-
-                <article class="template-card" data-category="food">
-
-                    <div class="preview food-preview">
-                        <span>FOOD</span>
-
-                        <div class="food-plate"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            FOOD
-                        </p>
-
-                        <h3>Biriyani</h3>
-
-                        <p>
-                            Food discovery and restaurant ordering
-                            interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="food">
-
-                    <div class="preview food-preview">
-                        <span>FOOD</span>
-
-                        <div class="food-plate"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            FOOD
-                        </p>
-
-                        <h3>Pizza</h3>
-
-                        <p>
-                            Restaurant browsing and food ordering
-                            experience.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="food">
-
-                    <div class="preview food-preview">
-                        <span>FOOD</span>
-
-                        <div class="food-plate"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            FOOD
-                        </p>
-
-                        <h3>Burger</h3>
-
-                        <p>
-                            Fast-food discovery and ordering
-                            interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="food">
-
-                    <div class="preview food-preview">
-                        <span>FOOD</span>
-
-                        <div class="food-plate"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            FOOD
-                        </p>
-
-                        <h3>Desserts</h3>
-
-                        <p>
-                            Dessert discovery and food ordering
-                            interface.
-                        </p>
-
-                        <span class="coming-soon">
-                            Coming Soon
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ========== TRAVEL ========== -->
-
-                <article class="template-card" data-category="travel">
-
-                    <div class="preview travel-preview">
-                        <span>TRAVEL</span>
-
-                        <div class="travel-sun"></div>
-                        <div class="travel-horizon"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            TRAVEL
-                        </p>
-
-                        <h3>Travel Explore</h3>
-
-                        <p>
-                            Discover destinations and explore
-                            places around the world.
-                        </p>
-
-                        <a href="travel_explore/index.html"
-                           class="view-link">
-                            View Template →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="travel">
-
-                    <div class="preview travel-preview">
-                        <span>TRAVEL</span>
-
-                        <div class="travel-sun"></div>
-                        <div class="travel-horizon"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            TRAVEL
-                        </p>
-
-                        <h3>Trip Planner</h3>
-
-                        <p>
-                            Organize destinations, activities
-                            and your complete itinerary.
-                        </p>
-
-                        <a href="trip_planner/index.html"
-                           class="view-link">
-                            View Template →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="travel">
-
-                    <div class="preview travel-preview">
-                        <span>TRAVEL</span>
-
-                        <div class="travel-sun"></div>
-                        <div class="travel-horizon"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            TRAVEL
-                        </p>
-
-                        <h3>Hotel Discovery</h3>
-
-                        <p>
-                            Discover and filter hotels for
-                            your next trip.
-                        </p>
-
-                        <a href="hotel_discovery/index.html"
-                           class="view-link">
-                            View Template →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <article class="template-card" data-category="travel">
-
-                    <div class="preview travel-preview">
-                        <span>TRAVEL</span>
-
-                        <div class="travel-sun"></div>
-                        <div class="travel-horizon"></div>
-                    </div>
-
-                    <div class="card-content">
-
-                        <p class="card-domain">
-                            TRAVEL
-                        </p>
-
-                        <h3>Travel Booking</h3>
-
-                        <p>
-                            Select packages and complete your
-                            travel booking experience.
-                        </p>
-
-                        <a href="travel_booking/index.html"
-                           class="view-link">
-                            View Template →
-                        </a>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= DOMAINS ================= -->
-
-        <section class="domains-section" id="domains">
-
-            <div class="section-heading">
-
-                <div>
-                    <p class="eyebrow">FOUR DOMAINS</p>
-
-                    <h2>
-                        Different ideas.<br>
-                        <span>One collection.</span>
-                    </h2>
-                </div>
-
-            </div>
-
-
-            <div class="domain-grid">
-
-                <div class="domain-item">
-                    <span>01</span>
-                    <h3>Shopping</h3>
-                    <p>
-                        E-commerce and product discovery.
-                    </p>
-                </div>
-
-                <div class="domain-item">
-                    <span>02</span>
-                    <h3>Cosmetics</h3>
-                    <p>
-                        Beauty and personal care experiences.
-                    </p>
-                </div>
-
-                <div class="domain-item">
-                    <span>03</span>
-                    <h3>Food</h3>
-                    <p>
-                        Food discovery and ordering interfaces.
-                    </p>
-                </div>
-
-                <div class="domain-item">
-                    <span>04</span>
-                    <h3>Travel</h3>
-                    <p>
-                        Travel discovery, planning and booking.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= TEAM ================= -->
-
-        <section class="team-section" id="team">
-
-            <div class="section-heading">
-
-                <div>
-                    <p class="eyebrow">THE TEAM</p>
-
-                    <h2>
-                        Four members.<br>
-                        <span>One collection.</span>
-                    </h2>
-                </div>
-
-            </div>
-
-
-            <div class="team-grid">
-
-                <div class="team-card">
-                    <span>01</span>
-                    <h3>Member 01</h3>
-                    <p>Shopping Interfaces</p>
-                </div>
-
-                <div class="team-card">
-                    <span>02</span>
-                    <h3>Member 02</h3>
-                    <p>Cosmetics Interfaces</p>
-                </div>
-
-                <div class="team-card">
-                    <span>03</span>
-                    <h3>Member 03</h3>
-                    <p>Food Interfaces</p>
-                </div>
-
-                <div class="team-card">
-                    <span>04</span>
-                    <h3>Member 04</h3>
-                    <p>Travel Interfaces</p>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-            UIVerse
+    <section class="container">
+
+        <div class="card">
+            <div class="logo sephora">SEPHORA</div>
+            <h2>Sephora</h2>
+            <p>Discover makeup, skincare and beauty products.</p>
+            <button onclick="openBrand('Sephora')">Explore</button>
+        </div>
+        <!-- Beauty Categories -->
+<section class="categories">
+
+    <h2>💄 Explore Beauty Categories</h2>
+    <p class="section-text">
+        Find everything you need for your perfect beauty look.
+    </p>
+
+    <div class="category-container">
+
+        <div class="category-card">
+            <span>💋</span>
+            <h3>Makeup</h3>
+            <p>Lipsticks, foundations, blush and more.</p>
         </div>
 
-        <p>
-            A modern UI template collection.
-        </p>
+        <div class="category-card">
+            <span>✨</span>
+            <h3>Skincare</h3>
+            <p>Discover skincare products for glowing skin.</p>
+        </div>
 
-        <span>
-            © 2026 UIVerse
-        </span>
+        <div class="category-card">
+            <span>💇‍♀️</span>
+            <h3>Haircare</h3>
+            <p>Products to keep your hair beautiful and healthy.</p>
+        </div>
 
+        <div class="category-card">
+            <span>🌸</span>
+            <h3>Fragrance</h3>
+            <p>Find your favourite perfumes and fragrances.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Why Choose Us -->
+<section class="why-us">
+
+    <h2>🌷 Why Choose Us?</h2>
+
+    <div class="features">
+
+        <div>
+            <span>💎</span>
+            <h3>Premium Brands</h3>
+            <p>Explore popular beauty brands in one place.</p>
+        </div>
+
+        <div>
+            <span>🛍️</span>
+            <h3>Easy Shopping</h3>
+            <p>Discover products quickly and easily.</p>
+        </div>
+
+        <div>
+            <span>❤️</span>
+            <h3>Beauty For Everyone</h3>
+            <p>Find products for every style and personality.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Newsletter -->
+<section class="newsletter">
+
+    <h2>💌 Stay Updated!</h2>
+
+    <p>
+        Subscribe to receive the latest beauty trends and offers.
+    </p>
+
+    <div class="subscribe-box">
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+        >
+
+        <button onclick="subscribe()">
+            Subscribe
+        </button>
+    </div>
+
+</section>
+
+        <div class="card">
+            <div class="logo lakme">LAKMÉ</div>
+            <h2>Lakmé</h2>
+            <p>Indian beauty products for your everyday look.</p>
+            <button onclick="openBrand('Lakmé')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="logo rare">RARE<br>BEAUTY</div>
+            <h2>Rare Beauty</h2>
+            <p>Beauty products designed to celebrate individuality.</p>
+            <button onclick="openBrand('Rare Beauty')">Explore</button>
+        </div>
+
+        <div class="card">
+            <div class="logo huda">HUDA<br>BEAUTY</div>
+            <h2>Huda Beauty</h2>
+            <p>High-performance makeup and beauty essentials.</p>
+            <button onclick="openBrand('Huda Beauty')">Explore</button>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Beauty Brands | Created for Web Development</p>
     </footer>
 
-
-    <script src="script.js"></script>
+    <script>
+        function openBrand(brand) {
+            alert("You selected " + brand + " 💄");
+        }
+    </script>
 
 </body>
-
 </html>

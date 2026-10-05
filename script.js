@@ -1,33 +1,16 @@
- const filterButtons = document.querySelectorAll(".filter");
-const templateCards = document.querySelectorAll(".template-card");
+// Function for brand buttons
 
-filterButtons.forEach(button => {
+function openBrand(brand) {
 
-    button.addEventListener("click", () => {
+    alert("You selected " + brand + " 💄");
 
-        filterButtons.forEach(btn => {
-            btn.classList.remove("active");
-        });
+}
 
-        button.classList.add("active");
 
-        const selectedCategory = button.dataset.filter;
+// Website loaded message
 
-        templateCards.forEach(card => {
+window.onload = function () {
 
-            const cardCategory = card.dataset.category;
+    console.log("Beauty Brands website loaded successfully!");
 
-            if (
-                selectedCategory === "all" ||
-                selectedCategory === cardCategory
-            ) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-
-        });
-
-    });
-
-});
+};
