@@ -1,711 +1,97 @@
- @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
-
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-
-
-html {
-    scroll-behavior: smooth;
-}
-
 
 body {
-    background: #f8f7f4;
-    color: #20201e;
-    font-family: "DM Sans", sans-serif;
-    line-height: 1.6;
+    background: #f5eee8;
+    color: #222;
+    text-align: center;
 }
 
-
-a {
-    text-decoration: none;
-    color: inherit;
+header {
+    background: #b58b65;
+    color: white;
+    padding: 35px;
 }
 
-
-/* ================= NAVBAR ================= */
-
-.navbar {
-    height: 102px;
-    padding: 0 6.5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: #f8f7f4;
-    border-bottom: 1px solid #ddd9d1;
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
+header h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
 }
 
-
-.logo {
-    font-family: "Playfair Display", serif;
-    font-size: 31px;
-    font-weight: 600;
+header p {
+    margin-top: 10px;
 }
-
-
-.nav-links {
-    display: flex;
-    gap: 42px;
-}
-
-
-.nav-links a {
-    font-size: 15px;
-    transition: opacity 0.3s ease;
-}
-
-
-.nav-links a:hover {
-    opacity: 0.5;
-}
-
-
-.nav-button {
-    border: 1px solid #343431;
-    padding: 15px 25px;
-    font-size: 14px;
-
-    transition: all 0.3s ease;
-}
-
-
-.nav-button:hover {
-    background: #252522;
-    color: #fff;
-}
-
-
-/* ================= HERO ================= */
 
 .hero {
-    min-height: 620px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 100px 11%;
+    background: white;
+    padding: 70px 20px;
 }
 
-
-.hero-content {
-    max-width: 780px;
+.hero h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
 }
 
-
-.eyebrow {
-    font-size: 11px;
-    letter-spacing: 4px;
-    font-weight: 600;
-    color: #8b7762;
-    margin-bottom: 22px;
+.hero p {
+    color: #666;
+    margin-bottom: 25px;
 }
 
-
-.hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: clamp(55px, 7vw, 94px);
-    line-height: 1.02;
-    font-weight: 500;
-    letter-spacing: -3px;
-}
-
-
-.hero h1 span {
-    color: #91806e;
-}
-
-
-.hero-description {
-    max-width: 530px;
-    margin-top: 30px;
-
-    color: #77736d;
-    font-size: 16px;
-}
-
-
-.hero-button {
-    display: inline-block;
-
-    margin-top: 36px;
-
-    background: #252522;
+button {
+    border: none;
+    background: #222;
     color: white;
-
-    padding: 16px 28px;
-
-    font-size: 14px;
-
-    transition: transform 0.3s ease;
-}
-
-
-.hero-button:hover {
-    transform: translateY(-3px);
-}
-
-
-/* ================= STATS ================= */
-
-.stats-section {
-    margin: 0 6.5%;
-
-    border-top: 1px solid #ddd9d1;
-    border-bottom: 1px solid #ddd9d1;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-
-.stat {
-    padding: 35px 20px;
-
-    border-right: 1px solid #ddd9d1;
-}
-
-
-.stat:last-child {
-    border-right: none;
-}
-
-
-.stat strong {
-    display: block;
-
-    font-family: "Playfair Display", serif;
-    font-size: 38px;
-    font-weight: 500;
-}
-
-
-.stat span {
-    color: #817d76;
-    font-size: 13px;
-}
-
-
-/* ================= SECTIONS ================= */
-
-.templates-section,
-.domains-section,
-.team-section {
-    padding: 130px 6.5%;
-}
-
-
-.section-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    margin-bottom: 55px;
-}
-
-
-.section-heading h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 52px;
-    line-height: 1.05;
-    font-weight: 500;
-}
-
-
-.section-heading h2 span {
-    color: #91806e;
-}
-
-
-.section-description {
-    width: 350px;
-    color: #77736d;
-    font-size: 14px;
-}
-
-
-/* ================= FILTERS ================= */
-
-.filters {
-    display: flex;
-    gap: 10px;
-
-    margin-bottom: 35px;
-}
-
-
-.filter {
-    border: 1px solid #d7d1c8;
-    background: transparent;
-
-    padding: 11px 20px;
-
-    font-family: inherit;
-    font-size: 13px;
-
+    padding: 13px 30px;
+    border-radius: 25px;
     cursor: pointer;
-
-    transition: all 0.3s ease;
 }
 
-
-.filter:hover,
-.filter.active {
-    background: #252522;
-    color: white;
-    border-color: #252522;
+button:hover {
+    background: #b58b65;
 }
 
-
-/* ================= TEMPLATE GRID ================= */
-
-.template-grid {
+.products {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px;
 }
 
-
-.template-card {
-    background: #fff;
-
-    border: 1px solid #dfdcd5;
-
-    transition: transform 0.35s ease,
-                box-shadow 0.35s ease;
+.card {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px #ddd;
 }
 
-
-.template-card:hover {
-    transform: translateY(-6px);
-
-    box-shadow: 0 15px 35px rgba(40, 38, 34, 0.08);
+.card h2 {
+    margin-bottom: 15px;
 }
 
-
-.preview {
-    height: 250px;
-
-    padding: 24px;
-
-    position: relative;
-
-    overflow: hidden;
+.card p {
+    color: #666;
 }
 
-
-.preview > span {
-    font-size: 10px;
-    letter-spacing: 4px;
-    font-weight: 600;
-}
-
-
-/* Shopping */
-
-.shopping-preview {
-    background: #ded9d0;
-}
-
-
-.preview-line {
-    width: 70%;
-    height: 2px;
-
-    background: #8e867c;
-
-    position: absolute;
-    left: 24px;
-    top: 100px;
-}
-
-
-.preview-boxes {
-    display: flex;
-    gap: 10px;
-
-    position: absolute;
-    left: 24px;
-    bottom: 35px;
-}
-
-
-.preview-boxes i {
-    width: 58px;
-    height: 70px;
-
-    background: #f6f4f0;
-
-    display: block;
-}
-
-
-/* Cosmetics */
-
-.cosmetics-preview {
-    background: #ead8d2;
-}
-
-
-.cosmetic-circle {
-    width: 100px;
-    height: 100px;
-
-    border-radius: 50%;
-
-    background: #f7eeea;
-
-    position: absolute;
-    right: 35px;
-    top: 70px;
-}
-
-
-.cosmetic-line {
-    width: 110px;
-    height: 7px;
-
-    background: #c7a99e;
-
-    position: absolute;
-    left: 30px;
-    bottom: 60px;
-}
-
-
-/* Food */
-
-.food-preview {
-    background: #e5ddd0;
-}
-
-
-.food-plate {
-    width: 125px;
-    height: 125px;
-
-    border: 9px solid #f8f5ee;
-
-    border-radius: 50%;
-
-    position: absolute;
-
-    left: 50%;
-    top: 52%;
-
-    transform: translate(-50%, -50%);
-}
-
-
-/* Travel */
-
-.travel-preview {
-    background: #ddd9ce;
-}
-
-
-.travel-sun {
-    width: 75px;
-    height: 75px;
-
-    border-radius: 50%;
-
-    background: #f2e6c9;
-
-    position: absolute;
-    right: 35px;
-    top: 70px;
-}
-
-
-.travel-horizon {
-    position: absolute;
-
-    width: 100%;
-    height: 75px;
-
-    bottom: 0;
-    left: 0;
-
-    background: #b8b2a5;
-
-    clip-path: polygon(
-        0 60%,
-        25% 35%,
-        48% 65%,
-        72% 20%,
-        100% 55%,
-        100% 100%,
-        0 100%
-    );
-}
-
-
-/* ================= CARD CONTENT ================= */
-
-.card-content {
-    padding: 28px;
-}
-
-
-.card-domain {
-    color: #987c63;
-
-    font-size: 10px;
-    letter-spacing: 3px;
-    font-weight: 600;
-
-    margin-bottom: 14px;
-}
-
-
-.card-content h3 {
-    font-family: "Playfair Display", serif;
-
-    font-size: 25px;
-    font-weight: 500;
-
-    margin-bottom: 12px;
-}
-
-
-.card-content p:not(.card-domain) {
-    color: #77736d;
-
-    font-size: 13px;
-
-    min-height: 60px;
-}
-
-
-.coming-soon {
+.back {
     display: inline-block;
-
-    margin-top: 15px;
-
-    color: #aaa39a;
-
-    font-size: 12px;
+    margin: 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
 }
-
-
-.view-link {
-    display: inline-block;
-
-    margin-top: 15px;
-
-    color: #75634f;
-
-    font-size: 12px;
-
-    transition: transform 0.3s ease;
-}
-
-
-.view-link:hover {
-    transform: translateX(4px);
-}
-
-
-/* ================= DOMAINS ================= */
-
-.domain-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    border-top: 1px solid #dcd8d0;
-}
-
-
-.domain-item {
-    padding: 35px 25px;
-
-    border-right: 1px solid #dcd8d0;
-}
-
-
-.domain-item:last-child {
-    border-right: none;
-}
-
-
-.domain-item span {
-    color: #a09281;
-    font-size: 12px;
-}
-
-
-.domain-item h3 {
-    font-family: "Playfair Display", serif;
-
-    font-size: 29px;
-    font-weight: 500;
-
-    margin: 20px 0 10px;
-}
-
-
-.domain-item p {
-    color: #77736d;
-    font-size: 13px;
-}
-
-
-/* ================= TEAM ================= */
-
-.team-section {
-    background: #e8e3da;
-}
-
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-
-.team-card {
-    padding: 45px 30px;
-
-    border-top: 1px solid #cfc8be;
-    border-right: 1px solid #cfc8be;
-}
-
-
-.team-card:last-child {
-    border-right: none;
-}
-
-
-.team-card span {
-    font-size: 11px;
-    color: #8d806f;
-}
-
-
-.team-card h3 {
-    font-family: "Playfair Display", serif;
-
-    font-size: 25px;
-    font-weight: 500;
-
-    margin-top: 18px;
-}
-
-
-.team-card p {
-    font-size: 13px;
-    color: #77736d;
-}
-
-
-/* ================= FOOTER ================= */
 
 footer {
-    padding: 50px 6.5%;
-
-    background: #252522;
-    color: #fff;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background: #222;
+    color: white;
+    padding: 20px;
 }
-
-
-.footer-logo {
-    font-family: "Playfair Display", serif;
-    font-size: 25px;
-}
-
-
-footer p,
-footer span {
-    font-size: 12px;
-    color: #aaa8a2;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1000px) {
-
-    .template-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .domain-grid,
-    .team-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stats-section {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
 
 @media (max-width: 700px) {
-
-    .navbar {
-        padding: 0 5%;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 80px 7%;
-    }
-
-    .templates-section,
-    .domains-section,
-    .team-section {
-        padding: 90px 7%;
-    }
-
-    .section-heading {
-        display: block;
-    }
-
-    .section-description {
-        width: auto;
-        margin-top: 25px;
-    }
-
-    .template-grid {
+    .products {
         grid-template-columns: 1fr;
     }
-
-    .domain-grid,
-    .team-grid,
-    .stats-section {
-        grid-template-columns: 1fr;
-    }
-
-    .stat,
-    .domain-item,
-    .team-card {
-        border-right: none;
-        border-bottom: 1px solid #dcd8d0;
-    }
-
-    footer {
-        display: block;
-    }
-
-    footer p {
-        margin: 15px 0;
-    }
-
 }
