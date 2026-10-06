@@ -1,16 +1,3 @@
-// Function for brand buttons
-
-function openBrand(brand) {
-
-    alert("You selected " + brand + " 💄");
-
+function visitHudaBeauty() {
+    window.open("https://hudabeauty.com/", "_blank");
 }
-
-
-// Website loaded message
-
-window.onload = function () {
-
-    console.log("Beauty Brands website loaded successfully!");
-
-};

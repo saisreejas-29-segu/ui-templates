@@ -3,270 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beauty Brands</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #fff5f8;
-            color: #333;
-        }
-
-        header {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        header h1 {
-            font-size: 35px;
-        }
-
-        header p {
-            margin-top: 8px;
-        }
-
-        .container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            padding: 40px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-        }
-
-        .logo {
-            width: 130px;
-            height: 130px;
-            margin: auto;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .sephora {
-            background: #111;
-            color: white;
-        }
-
-        .lakme {
-            background: #e91e63;
-            color: white;
-        }
-
-        .rare {
-            background: #f8c8d8;
-            color: #222;
-        }
-
-        .huda {
-            background: #b58b65;
-            color: white;
-        }
-
-        .card h2 {
-            margin: 20px 0 10px;
-        }
-
-        .card p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        button {
-            border: none;
-            padding: 12px 25px;
-            border-radius: 25px;
-            background: #111;
-            color: white;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: #e91e63;
-        }
-
-        footer {
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-
-        @media(max-width: 900px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media(max-width: 600px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>Huda Beauty</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>✨ BEAUTY BRANDS ✨</h1>
-        <p>Explore Your Favourite Makeup Brands</p>
-    </header>
+<header>
+    <h1>HUDA BEAUTY</h1>
+    <p>Makeup & Beauty Essentials</p>
+</header>
 
-    <section class="container">
-
-        <div class="card">
-            <div class="logo sephora">SEPHORA</div>
-            <h2>Sephora</h2>
-            <p>Discover makeup, skincare and beauty products.</p>
-            <button onclick="openBrand('Sephora')">Explore</button>
-        </div>
-        <!-- Beauty Categories -->
-<section class="categories">
-
-    <h2>💄 Explore Beauty Categories</h2>
-    <p class="section-text">
-        Find everything you need for your perfect beauty look.
-    </p>
-
-    <div class="category-container">
-
-        <div class="category-card">
-            <span>💋</span>
-            <h3>Makeup</h3>
-            <p>Lipsticks, foundations, blush and more.</p>
-        </div>
-
-        <div class="category-card">
-            <span>✨</span>
-            <h3>Skincare</h3>
-            <p>Discover skincare products for glowing skin.</p>
-        </div>
-
-        <div class="category-card">
-            <span>💇‍♀️</span>
-            <h3>Haircare</h3>
-            <p>Products to keep your hair beautiful and healthy.</p>
-        </div>
-
-        <div class="category-card">
-            <span>🌸</span>
-            <h3>Fragrance</h3>
-            <p>Find your favourite perfumes and fragrances.</p>
-        </div>
-
-    </div>
+<section class="hero">
+    <h2>Discover Huda Beauty</h2>
+    <p>Explore high-performance makeup and beauty products.</p>
+    <button onclick="visitHudaBeauty()">Visit Huda Beauty</button>
 </section>
 
+<section class="products">
 
-<!-- Why Choose Us -->
-<section class="why-us">
+    <div class="card">
+        <h2>💄 Makeup</h2>
+        <p>Explore high-performance makeup products.</p>
+    </div>
 
-    <h2>🌷 Why Choose Us?</h2>
+    <div class="card">
+        <h2>✨ Eyes</h2>
+        <p>Discover beautiful eyeshadow and eye makeup.</p>
+    </div>
 
-    <div class="features">
-
-        <div>
-            <span>💎</span>
-            <h3>Premium Brands</h3>
-            <p>Explore popular beauty brands in one place.</p>
-        </div>
-
-        <div>
-            <span>🛍️</span>
-            <h3>Easy Shopping</h3>
-            <p>Discover products quickly and easily.</p>
-        </div>
-
-        <div>
-            <span>❤️</span>
-            <h3>Beauty For Everyone</h3>
-            <p>Find products for every style and personality.</p>
-        </div>
-
+    <div class="card">
+        <h2>💋 Lips</h2>
+        <p>Find amazing lip products and shades.</p>
     </div>
 
 </section>
 
+<a class="back" href="../index.html">← Back to Beauty Brands</a>
 
-<!-- Newsletter -->
-<section class="newsletter">
+<footer>
+    <p>© 2026 Huda Beauty Project</p>
+</footer>
 
-    <h2>💌 Stay Updated!</h2>
-
-    <p>
-        Subscribe to receive the latest beauty trends and offers.
-    </p>
-
-    <div class="subscribe-box">
-        <input
-            type="email"
-            id="email"
-            placeholder="Enter your email"
-        >
-
-        <button onclick="subscribe()">
-            Subscribe
-        </button>
-    </div>
-
-</section>
-
-        <div class="card">
-            <div class="logo lakme">LAKMÉ</div>
-            <h2>Lakmé</h2>
-            <p>Indian beauty products for your everyday look.</p>
-            <button onclick="openBrand('Lakmé')">Explore</button>
-        </div>
-
-        <div class="card">
-            <div class="logo rare">RARE<br>BEAUTY</div>
-            <h2>Rare Beauty</h2>
-            <p>Beauty products designed to celebrate individuality.</p>
-            <button onclick="openBrand('Rare Beauty')">Explore</button>
-        </div>
-
-        <div class="card">
-            <div class="logo huda">HUDA<br>BEAUTY</div>
-            <h2>Huda Beauty</h2>
-            <p>High-performance makeup and beauty essentials.</p>
-            <button onclick="openBrand('Huda Beauty')">Explore</button>
-        </div>
-
-    </section>
-
-    <footer>
-        <p>© 2026 Beauty Brands | Created for Web Development</p>
-    </footer>
-
-    <script>
-        function openBrand(brand) {
-            alert("You selected " + brand + " 💄");
-        }
-    </script>
+<script src="script.js"></script>
 
 </body>
 </html>
