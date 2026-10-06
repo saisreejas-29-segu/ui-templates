@@ -641,39 +641,4 @@ footer .copyright {
         align-items: flex-start;
     }
 }
-<section class="team-section">
-
-    <div class="section-heading">
-        ...
-    </div>
-
-    <div class="team-grid">
-
-        <div class="team-item">
-            <span>01</span>
-            <h3>Member 01</h3>
-            <p>Shopping Interfaces</p>
-        </div>
-
-        <div class="team-item">
-            <span>02</span>
-            <h3>S.SREEJA</h3>
-            <p>Cosmetics Interfaces</p>
-        </div>
-
-        <div class="team-item">
-            <span>03</span>
-            <h3>N.GOUTHAMI</h3>
-            <p>Food Interfaces</p>
-        </div>
-
-        <div class="team-item">
-            <span>04</span>
-            <h3>Member 04</h3>
-            <p>Travel Interfaces</p>
-        </div>
-
-    </div>
-
-</section>
 
