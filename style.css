@@ -461,3 +461,219 @@ body {
         font-size: 48px;
     }
 }
+/* ================= TEAM SECTION ================= */
+
+.team-section {
+    background: #f5eee8;
+    padding: 110px 6%;
+    border-top: 1px solid #ddd0c5;
+}
+
+.team-section .section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 65px;
+}
+
+.team-section .section-heading h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 0.98;
+    letter-spacing: -3px;
+    font-weight: 700;
+}
+
+.team-section .section-heading h2 span {
+    color: #b58b65;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 1px solid #cfc1b5;
+    border-bottom: 1px solid #cfc1b5;
+}
+
+.team-item {
+    min-height: 260px;
+    padding: 35px 30px;
+    border-right: 1px solid #cfc1b5;
+    transition: background 0.25s ease;
+}
+
+.team-item:last-child {
+    border-right: none;
+}
+
+.team-item:hover {
+    background: #eee3da;
+}
+
+.team-item > span {
+    display: block;
+    color: #b58b65;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+}
+
+.team-item h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.team-item p {
+    color: #666;
+    font-size: 15px;
+    margin: 0;
+}
+
+
+/* ================= TEAM SECTION - LARGE NUMBERS ================= */
+
+.team-item::after {
+    content: "↗";
+    display: block;
+    margin-top: 35px;
+    font-size: 20px;
+    color: #b58b65;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.25s ease;
+}
+
+.team-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #222;
+    color: white;
+    padding: 60px 6% 35px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer .copyright {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* ================= TEAM MOBILE ================= */
+
+@media (max-width: 1000px) {
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .team-item:nth-child(1),
+    .team-item:nth-child(2) {
+        border-bottom: 1px solid #cfc1b5;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .team-section {
+        padding: 80px 6%;
+    }
+
+    .team-section .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .team-section .section-heading h2 {
+        font-size: 45px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-item {
+        min-height: 210px;
+        border-right: none;
+        border-bottom: 1px solid #cfc1b5;
+        padding: 30px 20px;
+    }
+
+    .team-item:last-child {
+        border-bottom: none;
+    }
+
+    .team-item:nth-child(1),
+    .team-item:nth-child(2) {
+        border-bottom: 1px solid #cfc1b5;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+<section class="team-section">
+
+    <div class="section-heading">
+        ...
+    </div>
+
+    <div class="team-grid">
+
+        <div class="team-item">
+            <span>01</span>
+            <h3>Member 01</h3>
+            <p>Shopping Interfaces</p>
+        </div>
+
+        <div class="team-item">
+            <span>02</span>
+            <h3>S.SREEJA</h3>
+            <p>Cosmetics Interfaces</p>
+        </div>
+
+        <div class="team-item">
+            <span>03</span>
+            <h3>N.GOUTHAMI</h3>
+            <p>Food Interfaces</p>
+        </div>
+
+        <div class="team-item">
+            <span>04</span>
+            <h3>Member 04</h3>
+            <p>Travel Interfaces</p>
+        </div>
+
+    </div>
+
+</section>
+
